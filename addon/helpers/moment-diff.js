@@ -4,7 +4,7 @@ import computeFn from '../utils/helper-compute';
 import BaseHelper from './-base';
 
 export default BaseHelper.extend({
-  compute: computeFn(function(params, { precision, float, locale, timeZone }) {
+  compute: computeFn(function([ datetime, ...params ], { precision, float, locale, timeZone }) {
     this._super(...arguments);
 
     if (!params || params && params.length !== 2) {
